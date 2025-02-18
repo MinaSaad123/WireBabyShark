@@ -4,7 +4,8 @@
 #include "packet.h"
 
 // IPPacket "inherits" from Packet.
-typedef struct IPPacket {
+typedef struct IPPacket 
+{
     Packet base; // Base Packet
     uint8_t ihl:4;
     uint8_t version:4;
@@ -17,6 +18,7 @@ typedef struct IPPacket {
     uint16_t check;
     uint32_t src;
     uint32_t dst;
+    
 } IPPacket;
 
 // Parse function for IP packets.

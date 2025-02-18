@@ -4,12 +4,14 @@
 #include "packet.h"
 
 // UDPPacket "inherits" from Packet.
-typedef struct UDPPacket {
+typedef struct UDPPacket 
+{
     Packet base;
     uint16_t src_port;
     uint16_t dst_port;
     uint16_t len;
     uint16_t checksum;
+    
 } UDPPacket;
 
 // Parse function for UDP packets.

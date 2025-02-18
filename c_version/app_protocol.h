@@ -4,7 +4,8 @@
 #include "packet.h"
 
 // Application Protocol "class" (base for HTTP, DNS, FTP, etc.)
-typedef struct AppProtocol {
+typedef struct AppProtocol 
+{
     Packet base;
     // Common application-layer fields could be added here.
 } AppProtocol;

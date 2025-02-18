@@ -4,7 +4,8 @@
 #include "packet.h"
 
 // TCPPacket "inherits" from Packet.
-typedef struct TCPPacket {
+typedef struct TCPPacket 
+{
     Packet base; // Base Packet
     uint16_t src_port;
     uint16_t dst_port;
@@ -15,6 +16,7 @@ typedef struct TCPPacket {
     uint16_t window;
     uint16_t checksum;
     uint16_t urgent_ptr;
+    
 } TCPPacket;
 
 // Parse function for TCP packets.
