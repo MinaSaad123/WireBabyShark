@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <sys/time.h>
 
-#define u_char unsigned char
+typedef unsigned char u_char;
 
 typedef struct Packet 
 {

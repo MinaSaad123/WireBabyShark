@@ -107,6 +107,7 @@ void usage(const char *progname)
 {
     fprintf(stderr, "Usage: %s -i <interface> [-f <filter expression>]\n", progname);
 }
+
 void die1(const char* message, const char *arg1, const char* arg2) 
 {
     fprintf(stderr, message, arg1, arg2);
@@ -187,7 +188,7 @@ int main(int argc, char **argv)
     // Start the capture loop.
     if (pcap_loop(handle, 0, packet_handler, (u_char *)dumper) < 0) 
     {
-        die2(stderr, "Error during packet capture: %s\n", pcap_geterr(handle));
+        die2("Error during packet capture: %s\n", pcap_geterr(handle));
     }
 
     // Clean up.
